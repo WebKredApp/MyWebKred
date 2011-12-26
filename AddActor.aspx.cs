@@ -82,7 +82,7 @@ namespace WebKred
 
                     if (fuAttchment.HasFile)
                     {
-                        fuAttchment.SaveAs(Server.MapPath("~/ActorDocuments/") + actorId.ToString() + "_" + fuAttchment.FileName);
+                        fuAttchment.SaveAs(Server.MapPath("~/App_Data/") + actorId.ToString() + "_" + fuAttchment.FileName);
                     }
 
                 }
@@ -179,12 +179,12 @@ namespace WebKred
                     actorBAL.ActorDocument = fupWaverFileEditInfo.FileName;
                     string mimeType = fupWaverFileEditInfo.PostedFile.ContentType;
 
-                    if (File.Exists(Server.MapPath("~/ActorDocuments/" + actorBAL.ActorId.ToString() + "_" + hdnWaverFile.Value.ToString())))
+                    if (File.Exists(Server.MapPath("~/App_Data/" + actorBAL.ActorId.ToString() + "_" + hdnWaverFile.Value.ToString())))
                     {
-                        File.Delete(Server.MapPath("~/ActorDocuments/" + actorBAL.ActorId.ToString() + "_" + hdnWaverFile.Value.ToString()));
+                        File.Delete(Server.MapPath("~/App_Data/" + actorBAL.ActorId.ToString() + "_" + hdnWaverFile.Value.ToString()));
                     }
 
-                    fupWaverFileEditInfo.SaveAs(Server.MapPath("~/ActorDocuments/") + actorBAL.ActorId.ToString() + "_" + fupWaverFileEditInfo.FileName);
+                    fupWaverFileEditInfo.SaveAs(Server.MapPath("~/App_Data/") + actorBAL.ActorId.ToString() + "_" + fupWaverFileEditInfo.FileName);
                 }
                 else
                 {
