@@ -126,7 +126,9 @@ namespace WebKred
                 e.Row.Attributes.Add("onmouseover", "this.style.backgroundColor='#0082B0';");
                 e.Row.Attributes.Add("onmouseout", "this.style.backgroundColor='#e1e8ee';");
                 int id = Convert.ToInt32(gvActor.DataKeys[e.Row.RowIndex].Value);
+                
                 //e.Row.Attributes.Add("onclick", "javascript:GetEditActor('" + id.ToString() + "');");
+                
                 e.Row.Cells[1].Attributes.Add("onclick", "javascript:GetEditActor('" + id.ToString() + "');");
                 e.Row.Cells[2].Attributes.Add("onclick", "javascript:GetEditActor('" + id.ToString() + "');");
                 e.Row.Cells[3].Attributes.Add("onclick", "javascript:GetEditActor('" + id.ToString() + "');");
